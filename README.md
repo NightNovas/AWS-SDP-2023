@@ -1,18 +1,18 @@
 # AWS Set Up for Edukit
 ## Edukit Tutorial for https://core2-for-aws-docs.m5stack.com/en/getting-started/
 ------------------------------------------------------------------------------------
-- Step 1: Make sure you have your IAM account made not the ROOT user in order to make the following steps work
-- Step 2: Open VS code and make sure you have platformIO(PIO) installed
-- Step 3: On the upper left click on terminal and the new terminal. We will have to log in into AWS. This is something you have to do if you want to work with the edukit since it need the credentials and endpoints for the edukit to communicate to the aws.
-- Step4: In the terminal write the following command to log in to aws `aws sso login --profile <Profile>` . This can be done in the CMD that windows has but doing it in VS code it makes it easier. Once you run the command it will launch a aws website for you to log into. 
+- Step 1: Ensure that you have an IAM account created, not the ROOT user, to facilitate the upcoming procedures
+- Step 2: Launch VS Code and confirm the installation of PlatformIO (PIO).
+- Step 3: Navigate to the upper-left corner, click on "Terminal," and select "New Terminal." Logging into AWS is necessary for working with the edukit, as it requires credentials and endpoints for communication with AWS.
+- Step4: In the terminal, execute the following command to log in to AWS: `aws sso login --profile <Profile>` .
 ![image](https://github.com/NightNovas/AWS-SDP-2023/assets/62362854/cb2b3798-d9da-43db-9079-3f5934700e49)
-where it says `Successfully logged into Start URL: https://d-91672c1355.awsapps.com/start#` in the terminal click the URL it gives you. This will allow you to enter the AWS account where you will need to get the command line information
-- Step 5: Once you have your credentials you want to run the command `aws configure` . You NEED to run this always or else you will not be able to get your endpoints. Since AWS uses short term credentials the ones you have from the account change and the token you have on the host machine will not be the correct.
-- Step 6: Once you have updated the credentials you will need to update the aws token.
-  ![image](https://github.com/NightNovas/AWS-SDP-2023/assets/62362854/7f1232d1-5106-434e-858f-6846abde1265)
-  Once you have the token go back to the terminal and type the following `aws configure set aws_session_token <Insert Token Here>`
-- Step 7: The token credentials have been updated you can confirm that everything is good if youre able to get the end point credentials by running this command which is needed for the endpoints in the tutorials ahead. `aws iot describe-endpoint --endpoint-type iot:Data-ATS` . NOTE: If you are the following the tutorial from https://core2-for-aws-docs.m5stack.com/en/getting-started/ you will notice that the command they give you is wrong.
-- Step 8: When you run the command you should be able to get end point like the picture below. After this you should be able to continue with the tutorials
+Performing this in VS Code simplifies the process. After running the command, an AWS website will open for login. Click on the URL provided in the terminal where it says `Successfully logged into Start URL: https://d-91672c1355.awsapps.com/start#`.
+- Step 5: After obtaining your credentials, run the command: `aws configure` . This command is crucial for acquiring endpoints. Since AWS uses short-term credentials, failing to run this command will result in incorrect information.
+- Step 6:  Update the AWS token after updating the credentials. When you have the token, return to the terminal and execute: `aws configure set aws_session_token <Insert Token Here>`
+  ![image](https://github.com/NightNovas/AWS-SDP-2023/assets/62362854/94947643-76a7-4bdd-bdf0-6835e92ad34d)
+
+- Step 7: Confirm the successful update of token credentials by running the command:`aws iot describe-endpoint --endpoint-type iot:Data-ATS` . Note: If you are following the tutorial from https://core2-for-aws-docs.m5stack.com/en/getting-started/, be aware that the provided command is incorrect.
+- Step 8: Upon executing the command, you should receive endpoint details as shown below. With this, you can proceed with the upcoming tutorials.
   ![image](https://github.com/NightNovas/AWS-SDP-2023/assets/62362854/3d8a4cc0-942f-483d-8711-dc1f999beab6)
 
   # Notable Errors You Might Encounter
