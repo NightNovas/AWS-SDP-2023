@@ -20,3 +20,7 @@ where it says `Successfully logged into Start URL: https://d-91672c1355.awsapps.
 Error 1: ![image](https://github.com/NightNovas/AWS-SDP-2023/assets/62362854/cd7ea877-b57a-487e-bb80-e0e8de997af8)
 The fix for this error is a simple one. You have to go to your host machine files and change the values on a file. 
 if you go to `core2-for-AWS-IoT-Edukit>Blinky-Hello-World>Utilities>AWS_IoT_registaration_helper` Here you will find the `requirements.txt` where you will have to open the file and where it says hidapi change the line to this one `hidapi==0.14.0`. Save and exit and the code should work.
+
+Error 2: ![image](https://github.com/NightNovas/AWS-SDP-2023/assets/62362854/92d53a88-dfcd-4740-9502-751c250cb31c)
+If you get this error it means that you have a endpoint issue and your credentials are not providing a endpoint to the aws. Follow the steps on how to update the token and it should be fine after that.
+
