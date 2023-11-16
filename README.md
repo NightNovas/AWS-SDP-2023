@@ -2,7 +2,7 @@
 ## Edukit Tutorial for https://core2-for-aws-docs.m5stack.com/en/getting-started/
 ------------------------------------------------------------------------------------
 - Step 1: Make sure you have your IAM account made not the ROOT user in order to make the following steps work
-- Step 2: Open VS code and gmake sure you have platformIO(PIO) installed
+- Step 2: Open VS code and make sure you have platformIO(PIO) installed
 - Step 3: On the upper left click on terminal and the new terminal. We will have to log in into AWS. This is something you have to do if you want to work with the edukit since it need the credentials and endpoints for the edukit to communicate to the aws.
 - Step4: In the terminal write the following command to log in to aws `aws sso login --profile <Profile>` . This can be done in the CMD that windows has but doing it in VS code it makes it easier. Once you run the command it will launch a aws website for you to log into. 
 ![image](https://github.com/NightNovas/AWS-SDP-2023/assets/62362854/cb2b3798-d9da-43db-9079-3f5934700e49)
